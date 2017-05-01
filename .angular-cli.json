@@ -9,7 +9,22 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        {
+          "glob": "**/*",
+          "input": "../node_modules/font-awesome/fonts",
+          "output": "./assets/font-awesome/"
+        },
+        {
+          "glob": "**/*",
+          "input": "../node_modules/primeng/resources/themes/omega/fonts",
+          "output": "./theme/fonts"
+        },
+        {
+          "glob": "**/*",
+          "input": "../node_modules/primeng/resources/themes/omega/images",
+          "output": "./theme/images"
+        }
       ],
       "index": "index.html",
       "main": "main.ts",
