@@ -1,7 +1,7 @@
-$sidebarColorText: #E1F5FE;
+@import '~styles/base/variables';
 
 .sidebar-content {
-  color: $sidebarColorText;
+  color: $sidebar-color-text;
   position: relative;
   z-index: 20;
 }
@@ -9,9 +9,9 @@ $sidebarColorText: #E1F5FE;
   text-align: center;
 
   i {
-    background-color: $sidebarColorText;
+    background-color: $sidebar-color-text;
     border-radius: 50%;
-    color: #2962FF;
+    color: $sidebar-color-primary;
     font-size: 40px;
     margin-top: 20px;
     padding: 20px;
@@ -24,7 +24,7 @@ $sidebarColorText: #E1F5FE;
   }
 }
 hr {
-  border: 1px solid $sidebarColorText;
+  border: 1px solid $sidebar-color-text;
   margin: 20px 10px;
 }
 ul {
@@ -40,7 +40,7 @@ ul {
       outline: none;
     }
     &.active {
-      background-color: #0D47A1;
+      background-color: $sidebar-color-secondary;
     }
 
     i {

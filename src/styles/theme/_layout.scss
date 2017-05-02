@@ -3,25 +3,25 @@
   left: 0;
   position: absolute;
   top: 0;
-  width: $sidebarWidth;
+  width: $sidebar-width;
   z-index: 10;
 
   &::before {
-    background: $sidebarColorPrimary;
+    background: $sidebar-color-primary;
     content: '';
     height: 100%;
     position: fixed;
     top: 0;
-    width: $sidebarWidth;
+    width: $sidebar-width;
   }
 }
 .layout-content {
   height: 100%;
-  margin-left: $sidebarWidth;
+  margin-left: $sidebar-width;
   position: relative;
 
   .component-container {
     height: 100%;
-    padding: $defaultPadding;
+    padding: $default-padding;
   }
 }
