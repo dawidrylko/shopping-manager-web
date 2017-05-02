@@ -1,0 +1,18 @@
+$sidebarWidth: 250px;
+
+$sidebarColorLight: rgb(244, 243, 246);
+$elementHeight: 26px;
+
+.sidebar-content {
+  position: relative;
+  z-index: 20;
+}
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+    position: relative;
+  }
+}

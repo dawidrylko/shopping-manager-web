@@ -1,13 +1,8 @@
-<div class="container-fluid">
-  <div class="row">
-    
-    <div class="col-md-3">
-      <app-sidebar></app-sidebar>
-    </div>
-    
-    <div class="col-md-9">
-      <router-outlet></router-outlet>
-    </div>
-    
+<div class="layout-sidebar">
+  <app-sidebar></app-sidebar>
+</div>
+<div class="layout-content">
+  <div class="component-container">
+    <router-outlet></router-outlet>
   </div>
 </div>

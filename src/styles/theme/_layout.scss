@@ -1,0 +1,27 @@
+.layout-sidebar {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: $sidebarWidth;
+  z-index: 10;
+
+  &::before {
+    background: $sidebarColorPrimary;
+    content: '';
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: $sidebarWidth;
+  }
+}
+.layout-content {
+  height: 100%;
+  margin-left: $sidebarWidth;
+  position: relative;
+
+  .component-container {
+    height: 100%;
+    padding: $defaultPadding;
+  }
+}

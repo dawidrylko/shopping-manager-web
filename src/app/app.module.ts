@@ -6,23 +6,22 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
+import { UiModule } from './ui/ui.module';
 import { PageModule } from './page/page.module';
 import { ProductModule } from './product/product.module';
 
-import { SidebarComponent } from './sidebar/sidebar.component';
-
-import { AppRoutes } from './app.routing'
+import { AppRoutes } from './app.routing';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SidebarComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
 
+    UiModule,
     PageModule,
     ProductModule,
 
