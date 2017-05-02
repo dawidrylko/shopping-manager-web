@@ -1,15 +1,14 @@
-<div>
-  <div>
+<p-toolbar>
+  <div class="ui-toolbar-group-left">
     <input
       type="text"
       #filter
       pInputText
-      size="50"
+      size="40"
       placeholder="Wyszukaj"
     >
-    <i class="fa fa-search"></i>
   </div>
-  <div>
+  <div class="ui-toolbar-group-right">
     <button 
       routerLink="/product/form"
       pButton
@@ -18,7 +17,8 @@
       label="Dodaj produkt"
     ></button>
   </div>
-</div>
+</p-toolbar>
+
 <p-dataTable 
   [value]="products"
   [rows]="10"
@@ -43,7 +43,7 @@
   ></p-column>
   <p-column 
     field="energy"
-    header="Wartość energetyczna"
+    header="Wartość energ."
     [sortable]="true"
   ></p-column>
   <p-column 
