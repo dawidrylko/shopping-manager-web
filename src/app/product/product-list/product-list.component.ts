@@ -27,4 +27,12 @@ export class ProductListComponent implements OnInit {
     });
   }
 
+  private openProductEditModal(productId: number) {
+    console.log('edit', productId);
+  }
+
+  private openProductDeleteModal(productId: number) {
+    console.log('remove', productId);
+  }
+
 }

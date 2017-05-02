@@ -1,9 +1,24 @@
+<div>
+  <div>
+    <input
+      type="text"
+      #filter
+      pInputText
+      size="50"
+      placeholder="Wyszukaj"
+    >
+    <i class="fa fa-search"></i>
+  </div>
+  <div>
+  </div>
+</div>
 <p-dataTable 
   [value]="products"
   [rows]="10"
   [paginator]="true"
   [pageLinks]="3"
   [rowsPerPageOptions]="[10, 20, 50]"
+  [globalFilter]="filter"
 >
   <p-column 
     field="ean"
@@ -12,14 +27,17 @@
   <p-column 
     field="name"
     header="Nazwa"
+    [sortable]="true"
   ></p-column>
   <p-column 
     field="manufacturer" 
     header="Producent"
+    [sortable]="true"
   ></p-column>
   <p-column 
     field="energy"
     header="Wartość energetyczna"
+    [sortable]="true"
   ></p-column>
   <p-column 
     field="netWeight"
@@ -29,7 +47,27 @@
     field="unitOfMeasure"
     header="Jednostka miary"
   ></p-column>
-  <p-column 
-    header="Opcje"
-  ></p-column>
+  <p-column
+    [style]="{ width: '90px' }"
+  >
+    <ng-template 
+      let-product="rowData" 
+      pTemplate="body"
+    >
+      <button 
+        (click)="openProductEditModal(product.id)"
+        pButton
+        type="button"
+        icon="fa-edit"
+        class="ui-button-success"
+      ></button>
+      <button 
+        (click)="openProductDeleteModal(product.id)"
+        pButton
+        type="button"
+        icon="fa-trash"
+        class="ui-button-danger"
+      ></button>
+    </ng-template>
+  </p-column>
 </p-dataTable>

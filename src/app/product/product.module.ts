@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import { DataTableModule } from 'primeng/primeng';
+import { ButtonModule, DataTableModule } from 'primeng/primeng';
 
 import { ProductRoutes } from './product.routing';
 import { ProductService } from './product.service';
@@ -14,6 +14,7 @@ import { ProductFormComponent } from './product-form/product-form.component';
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    ButtonModule,
     DataTableModule,
     ProductRoutes
   ],
