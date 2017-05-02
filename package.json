@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot -prod"
+    "preinstall": "npm install -g http-server",
+    "postinstall": "ng build && mv dist/* ."
   },
   "private": true,
   "dependencies": {
@@ -25,9 +26,9 @@
     "font-awesome": "^4.7.0",
     "primeng": "^4.0.0",
     "rxjs": "^5.1.0",
-    "zone.js": "^0.8.9"
-  },
-  "devDependencies": {
+    "zone.js": "^0.8.9",
+
+    // Heroku need devDependencies here
     "@angular/cli": "^1.0.1",
     "@angular/compiler-cli": "^4.1.0",
     "@types/jasmine": "2.5.38",
@@ -45,5 +46,7 @@
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
     "typescript": "^2.3.1"
+  },
+  "devDependencies": {
   }
 }
